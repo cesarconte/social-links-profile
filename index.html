@@ -1,61 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
-  <link rel="stylesheet" href="styles.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
 
-  <!-- <style>
+    <title>Frontend Mentor | Social links profile</title>
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+
+    <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
-</head>
-<body>
-  <main>
-    <article class="profile-card">
+  </head>
+  <body>
+    <main>
+      <article
+        class="profile-card"
+        aria-label="User profile">
+        <!-- User Info -->
+        <section class="user-info">
+          <header class="user-info__header">
 
-      <section class="user-info">
-        <img class="user-info__avatar" src="./assets/images/avatar-jessica.jpeg" alt="Jessica Randall" />
-        <header class="user-info__header">
-          <h1 class="user-info__name">Jessica Randall</h1>
-          <p class="user-info__location">London, United Kingdom</p>
-          <p class="user-info__bio">"Front-end developer and avid reader."</p>
-        </header>
-      </section>
+            <section class="user-info__avatar-container">
+              <img
+              class="user-info__avatar"
+              src="./assets/images/avatar-jessica.jpeg"
+              alt="Jessica Randall" />
+            </section>
 
-      <section class="social-links">
-        <h2 class="social-links__title">Social Links</h2>
-        <ul class="social-links__list">
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">GitHub</a>
-          </li>
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">Frontend Mentor</a>
-          </li>
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">LinkedIn</a>
-          </li>
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">Twitter</a>
-          </li>
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">Instagram</a>
-          </li>
-        </ul>
-      </section>
+            <section class="user-info__details">
+              <h1 class="user-info__name">Jessica Randall</h1>
+              <p class="user-info__location">London, United Kingdom</p>
+            </section>
 
-    </article>
-  </main>
+            <section class="user-info__bio-container">
+              <p class="user-info__bio">
+                "Front-end developer and avid reader."
+              </p>
+            </section>
 
-  <footer class="attribution">
-    <div class="attribution__content">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  </footer>
-</body>
+          </header>
+        </section>
+        <!-- Social Links -->
+        <section
+          class="social-links"
+          aria-labelledby="social-links__title">
+          <h2
+            id="social-links__title"
+            class="visually-hidden">
+            Social Links
+          </h2>
+          <ul class="social-links__list">
+            <li class="social-links__item">
+              <a
+                class="social-links__link"
+                href="#"
+                >GitHub</a
+              >
+            </li>
+            <li class="social-links__item">
+              <a
+                class="social-links__link"
+                href="#"
+                >Frontend Mentor</a
+              >
+            </li>
+            <li class="social-links__item">
+              <a
+                class="social-links__link"
+                href="#"
+                >LinkedIn</a
+              >
+            </li>
+            <li class="social-links__item">
+              <a
+                class="social-links__link"
+                href="#"
+                >Twitter</a
+              >
+            </li>
+            <li class="social-links__item">
+              <a
+                class="social-links__link"
+                href="#"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      <div class="attribution__content">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">César Conte</a>.
+      </div>
+    </footer>
+  </body>
 </html>

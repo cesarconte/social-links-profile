@@ -1,0 +1,268 @@
+/* Variables */
+:root {
+  /* Colors */
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --blue-500: hsl(228, 45%, 44%);
+  --violet-600: hsl(252, 78%, 60%);
+
+  /* Semantic colors */
+  --text-primary: var(--white);
+  --text-secondary: var(--green);
+  --background: var(--grey-900);
+  --card-background: var(--grey-800);
+  --card-link: var(--grey-700);
+  --link-color: var(--blue-500);
+  --social-link-color-hover: var(--grey-800);
+  --footer-link-color-hover: var(--violet-600);
+  --shadow-color: hsla(0, 0%, 0%, 0.1);
+  --shadow-color-hover: hsla(0, 0%, 100%, 0.1);
+  --shadow-color-link-hover: hsl(75, 94%, 57%, 0.4);
+
+  /* Shadows */
+  --shadow: 
+    0 2px 4px -2px var(--shadow-color),
+    0 4px 8px -2px var(--shadow-color);
+  
+  --shadow-on-hover: 
+    0 4px 6px -1px var(--shadow-color-hover),
+    0 10px 15px -3px var(--shadow-color-hover);
+
+  --shadow-on-link-hover: 
+    0 4px 6px -1px var(--shadow-color-link-hover),
+    0 10px 15px -3px var(--shadow-color-link-hover);
+
+  /* Typography */
+  --font-family: 'Inter', sans-serif;
+  /* --text-preset-1: 800 clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem) / 150%
+    var(--font-family);
+  --text-preset-2: 500 clamp(0.875rem, 0.831rem + 0.1878vw, 1rem) / 150%
+    var(--font-family);
+  --text-preset-3: 400 clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem) / 150%
+    var(--font-family);
+  --text-preset-3__bold: 800 clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem) /
+    150% var(--font-family);
+  --text-preset-3__bold__fixed: 800 0.875rem / 150% var(--font-family); */
+  --text-preset-1: 700 1.5rem/1.5 var(--font-family);
+  --text-preset-2: 400 0.875rem/1.5 var(--font-family);
+  --text-preset-3: 600 0.875rem/1.5 var(--font-family);
+  --text-preset-4: 400 0.688rem/1.5 var(--font-family);
+
+  /* Spacing scale */
+  --spacing-600: 2.5rem;
+  --spacing-500: 2rem;
+  --spacing-400: 1.5rem;
+  --spacing-350: 1.25rem;
+  --spacing-300: 1rem;
+  --spacing-200: 0.75rem;
+  --spacing-150: 0.625rem;
+  --spacing-100: 0.5rem;
+  --spacing-50: 0.25rem;
+
+  /* Border radius scale */
+  --border-radius-500: 1.25rem;
+  --border-radius-400: 1rem;
+  --border-radius-300: 0.75rem;
+  --border-radius-200: 0.5rem;
+  --border-radius-100: 0.375rem;
+
+  /* Width scale */
+  /* --width-300: 384px;
+  --width-100: 327px; */
+
+  /* Transition */
+  --transition-default: 0.3s ease-in-out;
+
+  /* Outline */
+  --outline-100: 1px solid white;
+  --outline-200: 1px solid red;
+  --outline-300: 1px solid chartreuse;
+  --outline-400: 1px solid blue;
+  --outline-500: 1px solid gold;
+  --outline-600: 1px solid orange;
+  --outline-800: 1px solid fuchsia;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: var(--outline-800); */
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reset img from Harry Roberts - @csswizardry */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Utilities */
+.visually-hidden {
+  position: absolute; /* Removes element from normal flow */
+  width: 1px; /* Reduces width to 1px */
+  height: 1px; /* Reduces height to 1px */
+  margin: -1px; /* Removes any margin that may affect */
+  padding: 0; /* Removes padding */
+  border: 0; /* Removes border */
+  overflow: hidden; /* Hides any overflowing content */
+  clip: rect(0, 0, 0, 0); /* Clips the content */
+  clip-path: inset(50%); /* Modern alternative for clip */
+  white-space: nowrap; /* Prevents line break */
+}
+
+/* Body */
+body {
+  color: var(--text-primary);
+  background-color: var(--background);
+  min-height: 100svh;
+  font-family: var(--font-family);
+}
+
+/* Main Container */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+
+/* Card */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-400);
+  padding: var(--spacing-600);
+  background-color: var(--card-background);
+  border-radius: var(--border-radius-300);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 384px;
+  margin-inline: var(--spacing-400);
+  transition: box-shadow var(--transition-default);
+}
+
+.profile-card:hover {
+  box-shadow: var(--shadow-on-hover);
+}
+
+.user-info__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-400);
+  width: 100%;
+  /* margin-bottom: var(--spacing-500); */
+}
+
+.user-info__avatar {
+  max-width: auto;
+  height: 5.625rem;
+  border-radius: 50%;
+  transition: transform var(--transition-default), box-shadow var(--transition-default);
+}
+
+.user-info__avatar:hover {
+  transform: scale(1.05) rotate(5deg);
+  box-shadow: var(--shadow-on-link-hover);
+}
+
+.user-info__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-50);
+}
+
+.user-info__name {
+  font: var(--text-preset-1);
+}
+
+.user-info__location {
+  font: var(--text-preset-3);
+  color: var(--green);
+}
+
+.user-info__bio {
+  font: var(--text-preset-2);
+}
+
+.social-links {
+  width: 100%;
+}
+
+.social-links__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-300);
+}
+
+.social-links__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-100);
+  width: 100%;
+  background-color: var(--card-link);
+  border-radius: var(--border-radius-100);
+  transition: background-color var(--transition-default), box-shadow var(--transition-default);
+}
+
+.social-links__item:hover {
+  background-color: var(--green);
+  box-shadow: var(--shadow-on-link-hover);
+}
+
+.social-links__link {
+  width: 100%;
+  text-align: center;
+  padding: var(--spacing-200) var(--spacing-300);
+  font: var(--text-preset-3);
+  color: var(--white);
+}
+
+.social-links__link:hover {
+  color: var(--social-link-color-hover);
+}
+
+/* Footer */
+.attribution {
+  font: var(--text-preset-4);
+  text-align: center;
+}
+
+.attribution__content a {
+  color: var(--link-color);
+}
+
+.attribution_content a:hover {
+  color: var(--link-color-hover);
+}
