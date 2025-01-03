@@ -17,41 +17,50 @@
     <link
       rel="stylesheet"
       href="styles.css" />
-
-    <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
   </head>
   <body>
     <main>
       <article
         class="profile-card"
-        aria-label="User profile">
-        <!-- User Info -->
-        <section class="user-info">
+        aria-labelledby="profile-card__title">
+        <h1
+          id="profile-card__title"
+          class="visually-hidden">
+          Jessica Randall's Profile
+        </h1>
+
+        <!-- User Info section -->
+        <section
+          class="user-info"
+          aria-labelledby="user-info__title">
+          <h2
+            id="user-info__title"
+            class="visually-hidden">
+            User Information
+          </h2>
+
+          <!-- Header profile info -->
           <header class="user-info__header">
-
-            <section class="user-info__avatar-container">
+            <div class="user-info__avatar-container">
               <img
-              class="user-info__avatar"
-              src="./assets/images/avatar-jessica.jpeg"
-              alt="Jessica Randall" />
-            </section>
+                class="user-info__avatar"
+                src="./assets/images/avatar-jessica.jpeg"
+                alt="Profile photo of Jessica Randall, a young woman with short dark hair wearing a black top" />
+            </div>
 
-            <section class="user-info__details">
-              <h1 class="user-info__name">Jessica Randall</h1>
+            <div class="user-info__details">
+              <h3 class="user-info__name">Jessica Randall</h3>
               <p class="user-info__location">London, United Kingdom</p>
-            </section>
+            </div>
 
-            <section class="user-info__bio-container">
+            <div class="user-info__bio-container">
               <p class="user-info__bio">
                 "Front-end developer and avid reader."
               </p>
-            </section>
-
+            </div>
           </header>
         </section>
+
         <!-- Social Links -->
         <section
           class="social-links"
@@ -59,13 +68,16 @@
           <h2
             id="social-links__title"
             class="visually-hidden">
-            Social Links
+            Social Media Profiles
           </h2>
-          <ul class="social-links__list">
+          <ul
+            class="social-links__list"
+            role="list">
             <li class="social-links__item">
               <a
                 class="social-links__link"
                 href="#"
+                aria-label="Link to Jessica Randall's GitHub profile"
                 >GitHub</a
               >
             </li>
@@ -73,6 +85,7 @@
               <a
                 class="social-links__link"
                 href="#"
+                aria-label="Link to Frontend Mentor's website"
                 >Frontend Mentor</a
               >
             </li>
@@ -80,6 +93,7 @@
               <a
                 class="social-links__link"
                 href="#"
+                aria-label="Link to Jessica Randall's LinkedIn profile"
                 >LinkedIn</a
               >
             </li>
@@ -87,6 +101,7 @@
               <a
                 class="social-links__link"
                 href="#"
+                aria-label="Link to Jessica Randall's Twitter profile"
                 >Twitter</a
               >
             </li>
@@ -94,6 +109,7 @@
               <a
                 class="social-links__link"
                 href="#"
+                aria-label="Link to Jessica Randall's Instagram profile"
                 >Instagram</a
               >
             </li>
@@ -101,7 +117,7 @@
         </section>
       </article>
     </main>
-
+    <!-- Attribution -->
     <footer class="attribution">
       <div class="attribution__content">
         Challenge by
