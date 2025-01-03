@@ -131,18 +131,22 @@ main {
   align-items: center;
   justify-content: center;
   gap: var(--spacing-400);
+  margin-inline: var(--spacing-400);
   padding: var(--spacing-600);
   background-color: var(--card-background);
-  border-radius: var(--border-radius-300);
-  box-shadow: var(--shadow);
   width: 100%;
   max-width: 24rem;
-  margin-inline: var(--spacing-400);
+  border-radius: var(--border-radius-300);
+  box-shadow: var(--shadow);
   transition: box-shadow var(--transition-default);
 }
 
 .profile-card:hover {
   box-shadow: var(--shadow-on-hover);
+}
+
+.user-info {
+  width: 100%;
 }
 
 .user-info__header {
@@ -151,8 +155,6 @@ main {
   align-items: center;
   justify-content: center;
   gap: var(--spacing-400);
-  width: 100%;
-  /* margin-bottom: var(--spacing-500); */
 }
 
 .user-info__avatar {
