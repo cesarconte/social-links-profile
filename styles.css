@@ -34,7 +34,7 @@
 
   /* Typography */
   --font-family: 'Inter', sans-serif;
-  --text-preset-1: 700 1.5rem var(--font-family);
+  --text-preset-1: 700 1.25rem var(--font-family);
   --text-preset-2: 400 0.875rem var(--font-family);
   --text-preset-3: 600 0.875rem var(--font-family);
   --text-preset-4: 400 0.688rem var(--font-family);
