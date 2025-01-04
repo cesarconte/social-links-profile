@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/cesarconte/social-links-profile)
-- Live Site URL: (https://sociallinksprofile-cc.netlify.app/)
+- Live Site URL: (https://cesarconte.github.io/social-links-profile/)
 
 ## My process
 
