@@ -1,26 +1,28 @@
 /* Variables */
 :root {
   /* Colors */
-  --green: hsl(75, 94%, 57%);
-  --white: hsl(0, 0%, 100%);
-  --grey-700: hsl(0, 0%, 20%);
-  --grey-800: hsl(0, 0%, 12%);
-  --grey-900: hsl(0, 0%, 8%);
-  --blue-500: hsl(228, 45%, 65%);
-  --violet-600: hsl(252, 78%, 75%);
+  --color-green: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0, 0%, 12%);
+  --color-grey-900: hsl(0, 0%, 8%);
+  --color-blue-500: hsl(228, 45%, 65%);
+  --color-violet-600: hsl(252, 78%, 75%);
 
   /* Semantic colors */
-  --text-primary: var(--white);
-  --text-secondary: var(--green);
-  --background: var(--grey-900);
-  --card-background: var(--grey-800);
-  --social-link: var(--grey-700);
-  --footer-link-color: var(--blue-500);
-  --social-link-color-hover: var(--grey-800);
-  --footer-link-color-hover: var(--violet-600);
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-green);
+  --background: var(--color-grey-900);
+  --card-background: var(--color-grey-800);
+  --social-link-color: var(--color-grey-700);
+  --footer-link-color: var(--color-blue-500);
+  --social-link-color-hover: var(--color-grey-800);
+  --footer-link-color-hover: var(--color-violet-600);
+
+  /* Shadow colors */
   --shadow-color: hsla(0, 0%, 0%, 0.1);
   --shadow-color-hover: hsla(0, 0%, 100%, 0.1);
-  --shadow-color-link-hover: hsl(75, 94%, 57%, 0.4);
+  --shadow-color-link-hover: hsla(75, 94%, 57%, 0.4);
 
   /* Shadows */
   --shadow: 0 2px 4px -2px var(--shadow-color),
@@ -34,13 +36,31 @@
 
   /* Typography */
   --font-family: 'Inter', sans-serif;
-  --text-preset-1: 700 1.5rem var(--font-family);
-  --text-preset-2: 400 0.875rem var(--font-family);
-  --text-preset-3: 600 0.875rem var(--font-family);
-  --text-preset-4: 400 0.688rem var(--font-family);
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-size-large: 1.5rem;
+  --font-size-medium: 0.875rem;
+  --font-size-small: 0.688rem;
+  --line-height-small: 1.25;
+  --line-height-medium: 1.5;
+  --line-height-base: 1.4;
+  --line-height-large: 1.75;
+
+  /* Text presets */
+  --text-preset-1: var(--font-weight-bold) var(--font-size-large) / var(--line-height-medium)
+    var(--font-family);
+  --text-preset-2: var(--font-weight-normal) var(--font-size-medium) / var(--line-height-medium)
+    var(--font-family);
+  --text-preset-3: var(--font-weight-semibold) var(--font-size-medium) / var(--line-height-medium)
+    var(--font-family);
+  --text-preset-4: var(--font-weight-normal) var(--font-size-small) / var(--line-height-medium)
+    var(--font-family);
 
   /* Spacing scale */
-  --spacing-600: 2.5rem;
+  --spacing-800: 3rem;
+  --spacing-700: 2.5rem;
+  --spacing-600: 2.25rem;
   --spacing-500: 2rem;
   --spacing-400: 1.5rem;
   --spacing-350: 1.25rem;
@@ -76,11 +96,9 @@
 
 html {
   font-size: 100%;
-  /* hanging-punctuation: first last; */
 }
 
 body {
-  line-height: 1.5;
   min-height: 100svh;
 }
 
@@ -102,13 +120,12 @@ img {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   text-wrap: balance;
 }
 
-p, li {
-  /* text-wrap: pretty; */
+p,
+li {
   max-width: 65ch;
 }
 
@@ -152,10 +169,9 @@ main {
 
 /* Card */
 .profile-card {
+  /* container-type: inline-size; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: var(--spacing-400);
   margin-inline: var(--spacing-400);
   padding: clamp(var(--spacing-400), 5%, var(--spacing-600));
@@ -209,7 +225,7 @@ main {
 
 .user-info__location {
   font: var(--text-preset-3);
-  color: var(--green);
+  color: var(--text-secondary);
 }
 
 .user-info__bio {
@@ -235,14 +251,14 @@ main {
   align-items: center;
   gap: var(--spacing-100);
   width: 100%;
-  background-color: var(--social-link);
+  background-color: var(--social-link-color);
   border-radius: var(--border-radius-100);
   transition: background-color var(--transition-default),
     box-shadow var(--transition-default);
 }
 
 .social-links__item:hover {
-  background-color: var(--green);
+  background-color: var(--color-green);
   box-shadow: var(--shadow-on-link-hover);
 }
 
@@ -274,5 +290,5 @@ main {
 .attribution__content a:hover {
   color: var(--footer-link-color-hover);
   text-decoration: underline;
-  text-underline-offset: .2rem;
+  text-underline-offset: 0.2rem;
 }
