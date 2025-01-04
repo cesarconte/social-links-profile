@@ -249,7 +249,7 @@ main {
 .social-links__link {
   width: 100%;
   text-align: center;
-  padding: var(--spacing-300);
+  padding: var(--spacing-200);
   font: var(--text-preset-3);
 }
 
