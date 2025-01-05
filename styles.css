@@ -276,6 +276,7 @@ main {
   width: 100%;
   padding: var(--spacing-200);
   font: var(--text-preset-3);
+  transition: color var(--transition-default);
 }
 
 .social-links__link:hover {
@@ -294,6 +295,7 @@ main {
 
 .attribution__content a {
   color: var(--footer-link-color);
+  transition: color var(--transition-default), text-decoration-color var(--transition-default);
 }
 
 .attribution__content a:hover {
