@@ -133,6 +133,11 @@ li {
 a {
   color: inherit;
   text-decoration: none;
+  transition: color var(--transition-default), text var(--transition-default);
+}
+
+a:hover {
+  color: var(--color-green);
 }
 
 li {
@@ -157,7 +162,9 @@ li {
 body {
   color: var(--text-primary);
   background-color: var(--background);
-  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Main Container */
@@ -165,7 +172,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100svh;
 }
 
 /* Card */
@@ -262,9 +268,12 @@ main {
   box-shadow: var(--shadow-on-link-hover);
 }
 
+.social-links__link, .attribution__content a {
+  text-align: center;
+}
+
 .social-links__link {
   width: 100%;
-  text-align: center;
   padding: var(--spacing-200);
   font: var(--text-preset-3);
 }
